@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,26 +7,26 @@
     <title>Ballettstudio Ost – Professioneller Ballettunterricht in Frankfurt</title>
     <meta name="description" content="Entdecke die Freude am Ballett! Professioneller Ballettunterricht für Kinder, Jugendliche und Erwachsene im Ballettstudio Ost in Frankfurt. Jetzt kostenlose Probestunde sichern!">
     <meta name="robots" content="index, follow">
+
  <style>
     body {
       margin: 0;
       font-family: Montserrat, sans-serif;
     }
-    .hero-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: #f9f9f9;
-      height: 100vh;
-    }
+.hero-section {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   background-color: #f9f9f9;
+   min-height: 80vh; }
     .hero-text {
       flex: 1;
       padding: 20px;
     }
     .hero-text h1 {
       font-size: 1.2rem;
-      letter-spacing: -0.2px; /* Enger zusammen */
+      letter-spacing: -0.2px; 
       margin-bottom: 10px;
       color: #333;
     }
@@ -33,7 +34,7 @@
       font-family:'PlayfairDisplayBold';
       font-size: 2.8rem;
       line-height: 1.2;
-      letter-spacing: -0.5px; /* Enger zusammen */
+      letter-spacing: -0.5px; 
       margin-bottom: 10px;
       color: #333;
     }
@@ -53,11 +54,12 @@
       justify-content: center;
       align-items: center;
     }
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+.hero-image img {
+   max-width: 100%;
+   height: auto;
+   max-height: 500px; 
+   border-radius: 10px;
+}
     @media (max-width: 768px) {
       .hero-section {
         flex-direction: column;
@@ -70,12 +72,9 @@
         font-size: 2rem;
       }
       .hero-text p {
-        font-size: 1rem;
+        font-size: 1.4rem;
       }
     }
-  </style>
-
-<style>
     .cta-button,
     .cta-light {
       display: inline-block;
@@ -104,108 +103,37 @@
                   inset 0px 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Spezifisch für den orangenen CTA-Button */
+   
     .cta-button {
       color: #ffffff;
-      background-color: #E3702D; /* Orange Farbe */
+      background-color: #E3702D;
       border: none;
     }
 
-    /* Spezifisch für den transparenten CTA-Light-Button */
+   
     .cta-light {
-      color: #E3702D; /* Orange Farbe für Text */
+      color: #E3702D; 
       background-color: transparent;
-      border: 2px solid #E3702D; /* Orangefarbener Rand */
+      border: 2px solid #E3702D;
     }
 
     .cta-light:hover {
-      background-color: #5D7293; /* Dunkelblauer Hintergrund beim Hover */
-      color: #ffffff; /* Weißer Text beim Hover */
+      background-color: #5D7293; 
+      color: #ffffff; 
     }
 
     .cta-light:active {
-      background-color: #3E4E68; /* Noch dunklerer Blau-Ton beim Klicken */
-      border-color: #3E4E68; /* Randfarbe beim Klicken */
-    }
+      background-color: #3E4E68; 
+      border-color: #3E4E68;     }
 
-    /* Abstand zwischen Buttons auf Mobilgeräten */
     @media (max-width: 768px) {
       .cta-button,
       .cta-light {
-        display: block; /* Buttons untereinander */
-        margin-bottom: 20px; /* Abstand zwischen Buttons */
+        display: block;
+        margin-bottom: 20px; 
       }
     }
-</style>
 
-<style>
-/* Benefit Section Styling */
-#benefit {
-    padding: 40px 20px;
-    background-color: #ffffff;
-}
-
-#benefit h2 {
-    text-align: center;
-    font-family: 'PlayfairDisplayBold', serif;
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Container for Reviews */
-.review-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-/* Individual Review Boxes */
-.review {
-    flex: 1;
-    min-width: 300px;
-    max-width: 32%;
-    background-color: #FAFAFA;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect for Review Boxes */
-.review:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Images Inside Review Boxes */
-.review img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-/* Headings Inside Reviews */
-.review h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #222;
-    margin: 10px 0;
-}
-
-/* Paragraph Styling */
-.review p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .review-container {
         flex-direction: column;
@@ -216,17 +144,14 @@
         max-width: 100%;
     }
 }
-</style>
 
-  <style>
-/* Header-Stile */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.7); /* Milchglas-Look */
+  background: rgba(255, 255, 255, 0.7); 
   backdrop-filter: blur(3px);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
@@ -259,19 +184,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #E3702D; /* Orange Hover-Effekt */
+  color: #E3702D; 
 }
 
-/* Hamburger Menü (mobil) */
+
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Mobile Navigation */
+
 .mobile-nav {
-  display: none; /* Standardmäßig versteckt */
+  display: none; 
   flex-direction: column;
   align-items: flex-start;
   background: rgba(255, 255, 255, 1);
@@ -304,12 +229,11 @@ nav ul li a:hover {
   color: #E3702D;
 }
 
-/* Klasse für geöffnete Navigation */
 .menu.open .mobile-nav {
   display: flex;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -320,25 +244,114 @@ nav ul li a:hover {
     color: #333;
   }
 }
-
 </style>
 
-<script>
-   function toggleMenu() {
-    document.querySelector('.menu').classList.toggle('open');
+<style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+
+.text-container {
+    max-width: 90%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+margin-left: 30px;
 }
 
-</script>
+.text-container h2 {
+      font-family:'PlayfairDisplayBold';
+      font-size: 2.8rem;
+      letter-spacing: -0.2px; /* Enger zusammen */
+      margin-bottom: 10px;
+      color: #333;
+    }
+      .text-container p {
+        font-size: 1.4rem;
+      }
 
+.word-cloud {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-left: 30px;
+    flex-wrap: wrap;
+}
+.word {
+    position: absolute;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    animation: float 3s infinite ease-in-out alternate;
+}
+        .word:hover {
+            transform: scale(1.2);
+            color: #d63384;
+        }
 
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(var(--angle));
+            }
+            100% {
+                transform: translateY(5px) rotate(calc(var(--angle) + 5deg));
+            }
+        }
+
+@media (max-width: 480px) {
+    .word {
+        font-size: 12px !important;
+    }
+}
+
+        @media (max-width: 600px) {
+            .word-cloud {
+                height: 50vh;
+            }
+
+            .word {
+                font-size: 14px !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            .word-cloud {
+		max-width: 1024px; 
+                height: 50vh;
+            }
+
+            .word {
+                font-size: 28px !important;
+            }
+        }
+@media (min-width: 1600px) {
+    .word-cloud {
+        max-width: 1200px; 
+}}
+</style>
 
   <script>
-    // Toggle-Funktion f r das mobile Men 
+    // Toggle-Funktion für das mobile Men 
     function toggleMenu() {
       const mobileNav = document.querySelector('.mobile-nav');
       mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
     }
   </script>
+</head>
+
+<body>
 
   <!-- Header -->
   <header>
@@ -351,8 +364,8 @@ nav ul li a:hover {
           <li><a href="https://www.ballettstudio-ost.de/kursleiter-ballettschule-frankfurt.php" title="Kursleiter beim Ballettstudio Ost">&Uuml;ber uns</a></li>
           <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" title="Kurse beim Ballettstudio Ost">Kurse</a></li>
           <li><a href="https://www.ballettstudio-ost.de/#stundenplan" title="Wann und wo findet welcher Kurs statt">Stundenplan</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/#preis" title="Kosten f r Ballettstunden">Preise</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/#contact" title="Kontakt zu Ballettstudio Ost">Kontakt </a></li>
+          <li><a href="https://www.ballettstudio-ost.de/#preis" title="Kosten für Ballettstunden">Preise</a></li>
+          <li><a href="https://www.ballettstudio-ost.de/#contact" title="Kontakt zum Ballettstudio Ost">Kontakt </a></li>
 	  <li></li>
         </ul>
       </nav>
@@ -364,16 +377,16 @@ nav ul li a:hover {
         <li><a href="https://www.ballettstudio-ost.de/kursleiter-ballettschule-frankfurt.php" title="Kursleiter beim Ballettstudio Ost">&Uuml;ber uns</a></li>
         <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" title="Kurse beim Ballettstudio Ost">Kurse</a></li>
         <li><a href="https://www.ballettstudio-ost.de/#stundenplan" title="Wann und wo findet welcher Kurs statt">Stundenplan</a></li>
-        <li><a href="https://www.ballettstudio-ost.de/#preis" title="Kosten f r Ballettstunden">Preise</a></li>
+        <li><a href="https://www.ballettstudio-ost.de/#preis" title="Kosten für Ballettstunden">Preise</a></li>
         <li><a href="https://www.ballettstudio-ost.de/#contact" title="Kontakt zu Ballettstudio Ost">Kontakt </a></li>
       </ul>
     </div>
   </header>
 
-</head>
+<section id="hero">
 
-<body>
-section id="hero">
+.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+
   <div class="hero-section"><br><br>
     <div class="hero-text"><h1>Ballettstudio Ost, Ballettschule in Frankfurt</h1>
       <h2>Entdecke die Welt des klassischen Balletts</h2>
@@ -382,14 +395,52 @@ section id="hero">
 	persönliches Ziel. Starte deine Reise mit einer Probestunde, die für
 	Kinder bis 14 Jahre kostenlos ist. Wir freuen uns auf dich!</p><br><br>
 
-  <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#105;&#110;&#102;&#111;&#064;&#098;&#097;&#108;&#108;&#101;&#116;&#116;&#115;&#116;&#117;&#100;&#105;&#111;&#045;&#111;&#115;&#116;&#046;&#100;&#101;?subject=Kostenlose%20Probestunde%20beim%20Ballettstudio%20Ost&body=" title="Probestunde sichern beim Ballettstudio Ost" class="cta-light">kostenlose Probestunde</a>&nbsp;&nbsp;&nbsp;
-<a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" class="cta-button">Infos zu unseren Kursen</a>
+<a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#105;&#110;&#102;&#111;&#064;&#098;&#097;&#108;&#108;&#101;&#116;&#116;&#115;&#116;&#117;&#100;&#105;&#111;&#045;&#111;&#115;&#116;&#046;&#100;&#101;?subject=Kostenlose%20Probestunde%20beim%20Ballettstudio%20Ost&body=" title="Probestunde sichern beim Ballettstudio Ost" class="cta-light">kostenlose Probestunde</a>
+<br><br><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" class="cta-button">Infos zu unseren Kursen</a>
     </div>
     <div class="hero-image">
       <img src="herosection.png" alt="Ballett Hero Image">
     </div>
   </div>
-
 </section>
 
+<br><br><br>
+
+
+<section id="wortwolke-section">
+<div class="text-container"><h2>Unser Ballett-Blog</h2>
+    <p>Interessierst Du Dich für die Ballett-Welt! Hier findest du Stichworte mit verlinkten Artikeln zu verschiedenen Themen rund um das Ballett.
+    Klicke auf die Begriffe in der Wortwolke, um mehr über Technik, Geschichte, Trainingstipps und vieles mehr zu erfahren.</p>
+    <p>Viel Spaß beim Stöbern!</p>
+</div>
+<div class="word-cloud">
+    <a href="https://www.ballettstudio-ost.de/auswahl-balletttrikot-ballettschuhe.php" class="word" style="top: 5%; left: 10%; font-size: 24px; --angle: 10deg; color: orange">Auswahl <br>Ballettbekleidung</a>
+    <a href="https://www.ballettstudio-ost.de/auswahlkriterien-passende-ballettschule.php" class="word" style="top: 10%; left: 50%; font-size: 22px; --angle: 2deg; color: blue">Auswahl Ballettschule</a>
+    <a href="https://www.ballettstudio-ost.de/verletzungen-vermeiden-im-ballett.php" class="word" style="top: 35%; left: 5%; font-size: 28px; --angle: -5deg;color: brown">Verletzungen</a>
+    <a href="https://www.ballettstudio-ost.de/wann-mit-ballett-anfangen.php" class="word" style="top: 35%; left: 55%; font-size: 18px; --angle: 10deg; color: orange">Ballettbeginn</a>
+    <a href="https://www.ballettstudio-ost.de/11-argumente-mit-ballett-anzufangen.php" class="word" style="top: 20%; left: 80%; font-size: 30px; --angle: -10deg; color: blue">Vorteile Ballett</a>
+    <a href="https://www.ballettstudio-ost.de/aufwaermen-dehnen.php" class="word" style="top: 60%; left: 70%; font-size: 22px; --angle: 5deg;">Aufwärmen<br>Dehnen</a>
+    <a href="https://www.ballettstudio-ost.de/ballett-zuhause.php" class="word" style="top: 65%; left: 35%; font-size: 26px; --angle: -18deg;">Ballett Zuhause</a>
+    <a href="https://www.ballettstudio-ost.de/lampenfieber-ballettauftritt.php" class="word" style="top: 80%; left: 5%; font-size: 22px; --angle: 2deg;color: red">Lampenfieber</a>
+    <a href="https://www.ballettstudio-ost.de/fuer-wen-ist-ballett-geeignet.php" class="word" style="top: 40%; left: 35%; font-size: 32px; --angle: -5deg; color: green">Eignung Ballett</a>
+    <a href="https://www.ballettstudio-ost.de/kalorien-verbrauch-ballett.php" class="word" style="top: 30%; left: 25%; font-size: 32px; --angle: 15deg;">Kalorien</a>
+    <a href="https://www.ballettstudio-ost.de/interaktive-tanz-weltkarte.php" class="word" style="top: 50%; left: 55%; font-size: 26px; --angle: -12deg; color: brown">Tanzkarte</a>
+    <a href="https://www.ballettstudio-ost.de/ballett-statistik.php" class="word" style="top: 75%; left: 80%; font-size: 18px; --angle: 8deg;">Statistiken</a>
+    <a href="https://www.ballettstudio-ost.de/geschichte-des-ballettschuhs.php" class="word" style="top: 25%; left: 0%; font-size: 28px; --angle: -18deg;">Ballettschuhe</a>
+    <a href="https://www.ballettstudio-ost.de/entwicklung-der-ballettbekleidung.php" class="word" style="top: 45%; left: 2%; font-size: 20px; --angle: -14deg;">Entwicklung <br>Ballettbekleidung</a>
+    <a href="https://www.ballettstudio-ost.de/ballett-tanz-als-beruf.php" class="word" style="top: 50%; left: 75%; font-size: 28px; --angle: -1deg; color: orange">Tanzausbildung</a>
+    <a href="https://www.ballettstudio-ost.de/beruehmte-ballettstuecke.php" class="word" style="top: 75%; left: 50%; font-size: 22px; --angle: -10deg;">Ballettstücke</a>
+    <a href="https://www.ballettstudio-ost.de/checkliste-ballett-anfangen.php" class="word" style="top: 40%; left: 80%; font-size: 20px; --angle: -22deg; color: green">Anmeldung</a>
+    <a href="https://www.ballettstudio-ost.de/ist-ballett-eigentlich-gesund.php" class="word" style="top: 85%; left: 65%; font-size: 22px; --angle: 11deg; color: orange">Gesundheit</a>
+    <a href="https://www.ballettstudio-ost.de/gewicht-profi-ballett.php" class="word" style="top: 5%; left: 80%; font-size: 24px; --angle: -14deg; color: brown">Gewicht</a>
+    <a href="https://www.ballettstudio-ost.de/ballett-musik.php" class="word" style="top: 25%; left: 35%; font-size: 20px; --angle: 5deg;">Musikgeschichte</a>
+    <a href="https://www.ballettstudio-ost.de/ballett-fitness-rechner.php" class="word" style="top: 55%; left: 30%; font-size: 28px; --angle: -9deg; color: red">Fitness</a>
+    <a href="https://www.ballettstudio-ost.de/ernaehrung-fuer-balletttaenzer.php" class="word" style="top: 65%; left: 5%; font-size: 18px; --angle: 14deg; color: blue">Ernährung</a>
+    <a href="https://www.ballettstudio-ost.de/ballett-regenerations-rechner.php" class="word" style="top: 90%; left: 35%; font-size: 22px; --angle: -11deg;  color: green">Regeneration</a>
+</div>
+
+
+</section>
+</body>
+</html>
 
