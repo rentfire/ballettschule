@@ -1,436 +1,694 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ballettstudio Ost – Professioneller Ballettunterricht in Frankfurt</title>
-    <meta name="description" content="Entdecke die Freude am Ballett! Professioneller Ballettunterricht für Kinder, Jugendliche und Erwachsene im Ballettstudio Ost in Frankfurt. Jetzt kostenlose Probestunde sichern!">
-    <meta name="robots" content="index, follow">
+  <title>Ballettstudio Ost – Professioneller Ballettunterricht in Frankfurt</title>
+  <meta name="description" content="Entdecke die Freude am Ballett! Professioneller Ballettunterricht für Kinder, Jugendliche und Erwachsene im Ballettstudio Ost in Frankfurt. Jetzt kostenlose Probestunde sichern!">
+  <meta name="robots" content="index, follow">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
- <style>
-body {
-  margin: 0;
-  font-family: Montserrat, sans-serif;
-  padding-top: 40px; 
-}
-.hero-section {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 20px;
-   background-color: #f9f9f9;
-   min-height: 90vh; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    /* Header Styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover img {
+      transform: scale(1.05);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+      padding: 5px 0;
+      position: relative;
+    }
+
+    nav ul li a:hover {
+      color: #E3702D;
+      transform: translateY(-2px);
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #E3702D;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      padding: 100px 20px 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 50px;
+    }
+
     .hero-text {
       flex: 1;
-      padding: 20px;
+      animation: fadeInLeft 1s ease-out;
     }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
     .hero-text h1 {
       font-size: 1.2rem;
-      letter-spacing: -0.2px; 
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .hero-text h2 {
-      font-family:'PlayfairDisplayBold';
-      font-size: 2.8rem;
-      line-height: 1.2;
-      letter-spacing: -0.5px; 
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .hero-text p {
-      font-size: 1.5rem;
-      line-height: 1.2;
-      letter-spacing: -0.1px;
       color: #666;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-text h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #2c3e50;
       margin-bottom: 20px;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .hero-text a:hover {
-      background-color: #8b7355;
+
+    .hero-text p {
+      font-size: 1.3rem;
+      color: #555;
+      margin-bottom: 40px;
+      line-height: 1.8;
     }
+
     .hero-image {
       flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      animation: fadeInRight 1s ease-out;
     }
-.hero-image img {
-   max-width: 100%;
-   height: auto;
-   max-height: 500px; 
-   border-radius: 10px;
-}
-    @media (max-width: 768px) {
-      .hero-section {
-        flex-direction: column;
-        text-align: center;
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
       }
-      .hero-text {
-        padding: 10px;
-      }
-      .hero-text h1 {
-        font-size: 2rem;
-      }
-      .hero-text p {
-        font-size: 1.4rem;
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image img:hover {
+      transform: translateY(-10px);
+    }
+
+    /* CTA Buttons */
     .cta-button,
     .cta-light {
       display: inline-block;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-align: center;
+      padding: 18px 35px;
+      font-size: 1.1rem;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 30px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+      border-radius: 50px;
+      margin: 10px 15px 10px 0;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .cta-button:hover,
-    .cta-light:hover {
-      transform: translateY(-3px);
-      box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.4), 
-                  inset 0px -3px 15px rgba(255, 255, 255, 0.3), 
-                  inset 0px 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .cta-button:active,
-    .cta-light:active {
-      transform: translateY(2px);
-      box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.4), 
-                  inset 0px -2px 8px rgba(255, 255, 255, 0.2), 
-                  inset 0px 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-   
     .cta-button {
-      color: #ffffff;
-      background-color: #E3702D;
-      border: none;
+      background: linear-gradient(135deg, #E3702D 0%, #ff6b6b 100%);
+      color: white;
+      box-shadow: 0 8px 25px rgba(227, 112, 45, 0.3);
     }
 
-   
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(227, 112, 45, 0.4);
+    }
+
     .cta-light {
-      color: #E3702D; 
-      background-color: transparent;
+      background: transparent;
+      color: #E3702D;
       border: 2px solid #E3702D;
     }
 
     .cta-light:hover {
-      background-color: #5D7293; 
-      color: #ffffff; 
+      background: #E3702D;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(227, 112, 45, 0.3);
     }
 
-    .cta-light:active {
-      background-color: #3E4E68; 
-      border-color: #3E4E68;     }
+    /* Blog Section */
+    .blog-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #E3702D 0%, #ff6b6b 100%);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-card h3 {
+      font-size: 1.4rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .blog-card p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .blog-card a {
+      color: #E3702D;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card a:hover {
+      color: #c55a1f;
+    }
+
+    .blog-card .icon {
+      font-size: 2rem;
+      color: #E3702D;
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+      color: white;
+      padding: 60px 20px 30px;
+      margin-top: 80px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #ecf0f1;
+    }
+
+    .footer-section p {
+      color: #bdc3c7;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: #bdc3c7;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links a:hover {
+      color: #3498db;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #95a5a6;
+    }
+
+    /* Mobile Responsive */
     @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 50px;
+        gap: 30px;
+      }
+
+      .hero-text h2 {
+        font-size: 2.5rem;
+      }
+
+      .hero-text p {
+        font-size: 1.1rem;
+      }
+
       .cta-button,
       .cta-light {
         display: block;
-        margin-bottom: 20px; 
+        margin: 10px 0;
+        text-align: center;
       }
-    }
 
-@media (max-width: 768px) {
-    .review-container {
-        flex-direction: column;
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
         gap: 30px;
-    }
-
-    .review {
-        max-width: 100%;
-    }
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.7); 
-  backdrop-filter: blur(3px);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Navigation Links */
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #E3702D; 
-}
-
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-
-.mobile-nav {
-  display: none; 
-  flex-direction: column;
-  align-items: flex-start;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  z-index: 999;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.mobile-nav ul li {
-  margin: 10px 0;
-}
-
-.mobile-nav ul li a {
-  color: #333;
-  font-size: 1.2rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.mobile-nav ul li a:hover {
-  color: #E3702D;
-}
-
-.menu.open .mobile-nav {
-  display: flex;
-}
-
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-    color: #333;
-  }
-}
-</style>
-
-<style>
-
-.text-container {
-    max-width: 90%;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
-    text-align: left;
-margin-left: 30px;
-}
-
-.text-container h2 {
-      font-family:'PlayfairDisplayBold';
-      font-size: 2.8rem;
-      letter-spacing: -0.2px; /* Enger zusammen */
-      margin-bottom: 10px;
-      color: #333;
-    }
-      .text-container p {
-        font-size: 1.4rem;
+        text-align: center;
       }
-
-.word-cloud {
-    position: relative;
-    width: 90%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-margin-left: 30px;
-    flex-wrap: wrap;
-}
-.word {
-    position: absolute;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out;
-    animation: float 3s infinite ease-in-out alternate;
-}
-        .word:hover {
-            transform: scale(1.2);
-            color: #d63384;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px) rotate(var(--angle));
-            }
-            100% {
-                transform: translateY(5px) rotate(calc(var(--angle) + 5deg));
-            }
-        }
-
-@media (max-width: 480px) {
-    .word {
-        font-size: 12px !important;
     }
-}
 
-        @media (max-width: 600px) {
-            .word-cloud {
-                height: 60vh;
-            }
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-            .word {
-                font-size: 14px !important;
-            }
-        }
-        @media (min-width: 1024px) {
-            .word-cloud {
-		max-width: 1024px; 
-                height: 50vh;
-            }
+    .blog-card {
+      animation: fadeInUp 0.6s ease-out;
+      animation-fill-mode: both;
+    }
 
-            .word {
-                font-size: 28px !important;
-            }
-        }
-@media (min-width: 1600px) {
-    .word-cloud {
-        max-width: 1200px; 
-}}
-</style>
+    .blog-card:nth-child(1) { animation-delay: 0.1s; }
+    .blog-card:nth-child(2) { animation-delay: 0.2s; }
+    .blog-card:nth-child(3) { animation-delay: 0.3s; }
+    .blog-card:nth-child(4) { animation-delay: 0.4s; }
+    .blog-card:nth-child(5) { animation-delay: 0.5s; }
+    .blog-card:nth-child(6) { animation-delay: 0.6s; }
+  </style>
 
   <script>
-    // Toggle-Funktion für das mobile Men 
     function toggleMenu() {
       const mobileNav = document.querySelector('.mobile-nav');
       mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
     }
+
+    // Smooth scrolling for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Header scroll effect
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+          header.style.background = 'rgba(255, 255, 255, 0.98)';
+          header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.15)';
+        } else {
+          header.style.background = 'rgba(255, 255, 255, 0.95)';
+          header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        }
+      });
+    });
   </script>
 </head>
 
 <body>
-
   <!-- Header -->
   <header>
     <div class="menu">
-      <a href="#" class="logo"><img src="bo-logo.webp" width="219" height="46" alt="Ballettstudio Ost Logo"></a>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <a href="#" class="logo">
+        <img src="bo-logo.webp" alt="Ballettstudio Ost Logo">
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
       <nav>
         <ul>
-          <li><a href="https://www.ballettstudio-ost.de/ballettschule-frankfurt-ostend.php" title="Newsticker Ballettstudio Ost">News</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/kursleiter-ballettschule-frankfurt.php" title="Kursleiter beim Ballettstudio Ost">&Uuml;ber uns</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" title="Kurse beim Ballettstudio Ost">Kurse</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/#stundenplan" title="Wann und wo findet welcher Kurs statt">Stundenplan</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/#preis" title="Kosten für Ballettstunden">Preise</a></li>
-          <li><a href="https://www.ballettstudio-ost.de/#contact" title="Kontakt zum Ballettstudio Ost">Kontakt </a></li>
-	  <li></li>
+          <li><a href="https://www.ballettstudio-ost.de/ballettschule-frankfurt-ostend.php">News</a></li>
+          <li><a href="https://www.ballettstudio-ost.de/kursleiter-ballettschule-frankfurt.php">Über uns</a></li>
+          <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php">Kurse</a></li>
+          <li><a href="#stundenplan">Stundenplan</a></li>
+          <li><a href="#preis">Preise</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
     </div>
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
       <ul>
-        <li><a href="https://www.ballettstudio-ost.de/ballettschule-frankfurt-ostend.php" title="Newsticker Ballettstudio Ost">News</a></li>
-        <li><a href="https://www.ballettstudio-ost.de/kursleiter-ballettschule-frankfurt.php" title="Kursleiter beim Ballettstudio Ost">&Uuml;ber uns</a></li>
-        <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" title="Kurse beim Ballettstudio Ost">Kurse</a></li>
-        <li><a href="https://www.ballettstudio-ost.de/#stundenplan" title="Wann und wo findet welcher Kurs statt">Stundenplan</a></li>
-        <li><a href="https://www.ballettstudio-ost.de/#preis" title="Kosten für Ballettstunden">Preise</a></li>
-        <li><a href="https://www.ballettstudio-ost.de/#contact" title="Kontakt zu Ballettstudio Ost">Kontakt </a></li>
+        <li><a href="https://www.ballettstudio-ost.de/ballettschule-frankfurt-ostend.php">News</a></li>
+        <li><a href="https://www.ballettstudio-ost.de/kursleiter-ballettschule-frankfurt.php">Über uns</a></li>
+        <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php">Kurse</a></li>
+        <li><a href="#stundenplan">Stundenplan</a></li>
+        <li><a href="#preis">Preise</a></li>
+        <li><a href="#contact">Kontakt</a></li>
       </ul>
     </div>
   </header>
 
-<section id="hero">
-
-
-  <div class="hero-section">
-
-<div class="hero-text"><h1>Ballettstudio Ost, Ballettschule in Frankfurt</h1>
-      <h2>Entdecke die Welt des klassischen Balletts</h2>
-      <p>Ob Anfänger oder Fortgeschrittene – bei uns findest du deinen Platz.
-	Erfahrene Profis leiten dich mit viel Freude am Tanz und individueller Betreuung an dein
-	persönliches Ziel. Starte deine Reise mit einer Probestunde, die für
-	Kinder bis 14 Jahre kostenlos ist. Wir freuen uns auf dich!</p><br><br>
-
-<a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#105;&#110;&#102;&#111;&#064;&#098;&#097;&#108;&#108;&#101;&#116;&#116;&#115;&#116;&#117;&#100;&#105;&#111;&#045;&#111;&#115;&#116;&#046;&#100;&#101;?subject=Kostenlose%20Probestunde%20beim%20Ballettstudio%20Ost&body=" title="Probestunde sichern beim Ballettstudio Ost" class="cta-light">kostenlose Probestunde</a>
-<a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" class="cta-button">Infos zu unseren Kursen</a>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1>Ballettstudio Ost, Ballettschule in Frankfurt</h1>
+        <h2>Entdecke die Welt des klassischen Balletts</h2>
+        <p>Ob Anfänger oder Fortgeschrittene – bei uns findest du deinen Platz. Erfahrene Profis leiten dich mit viel Freude am Tanz und individueller Betreuung an dein persönliches Ziel. Starte deine Reise mit einer Probestunde, die für Kinder bis 14 Jahre kostenlos ist. Wir freuen uns auf dich!</p>
+        
+        <div class="cta-container">
+          <a href="mailto:info@ballettstudio-ost.de?subject=Kostenlose%20Probestunde%20beim%20Ballettstudio%20Ost&body=" class="cta-light">
+            <i class="fas fa-star"></i> Kostenlose Probestunde
+          </a>
+          <a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" class="cta-button">
+            <i class="fas fa-info-circle"></i> Infos zu unseren Kursen
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="herosection.png" alt="Elegante Balletttänzerin im Ballettstudio Ost">
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="herosection.png" alt="Ballett Hero Image">
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <div class="section-header">
+      <h2>Unser Ballett-Blog</h2>
+      <p>Tauche ein in die faszinierende Welt des Balletts! Entdecke Artikel zu Technik, Geschichte, Trainingstipps und vielem mehr. Klicke auf die Themen, um dein Wissen zu erweitern.</p>
     </div>
-  </div>
-</section>
 
-<br><br><br>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="icon"><i class="fas fa-tshirt"></i></div>
+        <h3>Ballettbekleidung</h3>
+        <p>Alles über die richtige Auswahl von Balletttrikots, Schuhen und Accessoires für optimalen Komfort und Performance.</p>
+        <a href="https://www.ballettstudio-ost.de/auswahl-balletttrikot-ballettschuhe.php">Mehr erfahren →</a>
+      </div>
 
+      <div class="blog-card">
+        <div class="icon"><i class="fas fa-school"></i></div>
+        <h3>Ballettschule wählen</h3>
+        <p>Wichtige Kriterien für die Auswahl der passenden Ballettschule und worauf Eltern achten sollten.</p>
+        <a href="https://www.ballettstudio-ost.de/auswahlkriterien-passende-ballettschule.php">Mehr erfahren →</a>
+      </div>
 
-<section id="wortwolke-section">
-<div class="text-container"><h2>Unser Ballett-Blog</h2>
-    <p>Interessierst Du Dich für die Ballett-Welt! Hier findest du Stichworte mit verlinkten Artikeln zu verschiedenen Themen rund um das Ballett.
-    Klicke auf die Begriffe in der Wortwolke, um mehr über Technik, Geschichte, Trainingstipps und vieles mehr zu erfahren.</p>
-    <p>Viel Spaß beim Stöbern!</p>
-</div>
-<div class="word-cloud">
-    <a href="https://www.ballettstudio-ost.de/auswahl-balletttrikot-ballettschuhe.php" class="word" style="top: 5%; left: 10%; font-size: 24px; --angle: 10deg; color: orange">Auswahl <br>Ballettbekleidung</a>
-    <a href="https://www.ballettstudio-ost.de/auswahlkriterien-passende-ballettschule.php" class="word" style="top: 10%; left: 50%; font-size: 22px; --angle: 2deg; color: blue">Auswahl Ballettschule</a>
-    <a href="https://www.ballettstudio-ost.de/verletzungen-vermeiden-im-ballett.php" class="word" style="top: 35%; left: 5%; font-size: 28px; --angle: -5deg;color: brown">Verletzungen</a>
-    <a href="https://www.ballettstudio-ost.de/wann-mit-ballett-anfangen.php" class="word" style="top: 35%; left: 55%; font-size: 18px; --angle: 10deg; color: orange">Ballettbeginn</a>
-    <a href="https://www.ballettstudio-ost.de/11-argumente-mit-ballett-anzufangen.php" class="word" style="top: 20%; left: 80%; font-size: 30px; --angle: -10deg; color: blue">Vorteile Ballett</a>
-    <a href="https://www.ballettstudio-ost.de/aufwaermen-dehnen.php" class="word" style="top: 60%; left: 70%; font-size: 22px; --angle: 5deg;">Aufwärmen<br>Dehnen</a>
-    <a href="https://www.ballettstudio-ost.de/ballett-zuhause.php" class="word" style="top: 65%; left: 35%; font-size: 26px; --angle: -18deg;">Ballett Zuhause</a>
-    <a href="https://www.ballettstudio-ost.de/lampenfieber-ballettauftritt.php" class="word" style="top: 80%; left: 5%; font-size: 22px; --angle: 2deg;color: red">Lampenfieber</a>
-    <a href="https://www.ballettstudio-ost.de/fuer-wen-ist-ballett-geeignet.php" class="word" style="top: 40%; left: 35%; font-size: 32px; --angle: -5deg; color: green">Eignung Ballett</a>
-    <a href="https://www.ballettstudio-ost.de/kalorien-verbrauch-ballett.php" class="word" style="top: 30%; left: 25%; font-size: 32px; --angle: 15deg;">Kalorien</a>
-    <a href="https://www.ballettstudio-ost.de/interaktive-tanz-weltkarte.php" class="word" style="top: 50%; left: 55%; font-size: 26px; --angle: -12deg; color: brown">Tanzkarte</a>
-    <a href="https://www.ballettstudio-ost.de/ballett-statistik.php" class="word" style="top: 75%; left: 80%; font-size: 18px; --angle: 8deg;">Statistiken</a>
-    <a href="https://www.ballettstudio-ost.de/geschichte-des-ballettschuhs.php" class="word" style="top: 25%; left: 0%; font-size: 28px; --angle: -18deg;">Ballettschuhe</a>
-    <a href="https://www.ballettstudio-ost.de/entwicklung-der-ballettbekleidung.php" class="word" style="top: 45%; left: 2%; font-size: 20px; --angle: -14deg;">Entwicklung <br>Ballettbekleidung</a>
-    <a href="https://www.ballettstudio-ost.de/ballett-tanz-als-beruf.php" class="word" style="top: 50%; left: 75%; font-size: 28px; --angle: -1deg; color: orange">Tanzausbildung</a>
-    <a href="https://www.ballettstudio-ost.de/beruehmte-ballettstuecke.php" class="word" style="top: 75%; left: 50%; font-size: 22px; --angle: -10deg;">Ballettstücke</a>
-    <a href="https://www.ballettstudio-ost.de/checkliste-ballett-anfangen.php" class="word" style="top: 40%; left: 80%; font-size: 20px; --angle: -22deg; color: green">Anmeldung</a>
-    <a href="https://www.ballettstudio-ost.de/ist-ballett-eigentlich-gesund.php" class="word" style="top: 85%; left: 65%; font-size: 22px; --angle: 11deg; color: orange">Gesundheit</a>
-    <a href="https://www.ballettstudio-ost.de/gewicht-profi-ballett.php" class="word" style="top: 5%; left: 80%; font-size: 24px; --angle: -14deg; color: brown">Gewicht</a>
-    <a href="https://www.ballettstudio-ost.de/ballett-musik.php" class="word" style="top: 25%; left: 35%; font-size: 20px; --angle: 5deg;">Musikgeschichte</a>
-    <a href="https://www.ballettstudio-ost.de/ballett-fitness-rechner.php" class="word" style="top: 55%; left: 30%; font-size: 28px; --angle: -9deg; color: red">Fitness</a>
-    <a href="https://www.ballettstudio-ost.de/ernaehrung-fuer-balletttaenzer.php" class="word" style="top: 65%; left: 5%; font-size: 18px; --angle: 14deg; color: blue">Ernährung</a>
-    <a href="https://www.ballettstudio-ost.de/ballett-regenerations-rechner.php" class="word" style="top: 90%; left: 35%; font-size: 22px; --angle: -11deg;  color: green">Regeneration</a>
-</div>
+      <div class="blog-card">
+        <div class="icon"><i class="fas fa-heart"></i></div>
+        <h3>Gesundheit & Vorteile</h3>
+        <p>Entdecke die vielen gesundheitlichen und mentalen Vorteile des Balletttrainings für alle Altersgruppen.</p>
+        <a href="https://www.ballettstudio-ost.de/11-argumente-mit-ballett-anzufangen.php">Mehr erfahren →</a>
+      </div>
 
+      <div class="blog-card">
+        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Verletzungsprävention</h3>
+        <p>Wichtige Tipps zur Vermeidung von Verletzungen beim Balletttraining und sichere Übungstechniken.</p>
+        <a href="https://www.ballettstudio-ost.de/verletzungen-vermeiden-im-ballett.php">Mehr erfahren →</a>
+      </div>
 
-</section>
+      <div class="blog-card">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h3>Ballett zu Hause</h3>
+        <p>Praktische Übungen und Tipps für das Training zu Hause, um deine Technik zu verbessern.</p>
+        <a href="https://www.ballettstudio-ost.de/ballett-zuhause.php">Mehr erfahren →</a>
+      </div>
+
+      <div class="blog-card">
+        <div class="icon"><i class="fas fa-fire"></i></div>
+        <h3>Fitness & Kalorien</h3>
+        <p>Erfahre mehr über den Kalorienverbrauch beim Ballett und wie es deine Fitness verbessert.</p>
+        <a href="https://www.ballettstudio-ost.de/kalorien-verbrauch-ballett.php">Mehr erfahren →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-ballet-dance"></i> Ballettstudio Ost</h3>
+        <p>Professioneller Ballettunterricht in Frankfurt für alle Altersgruppen. Entdecke die Freude am Tanz in unserem modernen Studio.</p>
+        <p><strong>Kostenlose Probestunden für Kinder bis 14 Jahre!</strong></p>
+      </div>
+
+      <div class="footer-section">
+        <h3><i class="fas fa-link"></i> Zusätzliche Ressourcen</h3>
+        <div class="footer-links">
+          <a href="https://ballettstost.web.app/" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i>
+            Ballettstudio Ost Web App
+          </a>
+          <a href="https://kinderballett-frankfurt.tiiny.site/" target="_blank" rel="noopener">
+            <i class="fas fa-child"></i>
+            Kinderballett Frankfurt
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3><i class="fas fa-map-marker-alt"></i> Kontakt</h3>
+        <div class="footer-links">
+          <a href="mailto:info@ballettstudio-ost.de">
+            <i class="fas fa-envelope"></i>
+            info@ballettstudio-ost.de
+          </a>
+          <a href="https://www.ballettstudio-ost.de/code/kontakt/form.php">
+            <i class="fas fa-phone"></i>
+            Kontaktformular
+          </a>
+          <a href="https://www.ballettstudio-ost.de/">
+            <i class="fas fa-globe"></i>
+            Hauptwebsite besuchen
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3><i class="fas fa-clock"></i> Schnellzugriff</h3>
+        <div class="footer-links">
+          <a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php">
+            <i class="fas fa-users"></i>
+            Unsere Kurse
+          </a>
+          <a href="https://www.ballettstudio-ost.de/#stundenplan">
+            <i class="fas fa-calendar-alt"></i>
+            Stundenplan
+          </a>
+          <a href="https://www.ballettstudio-ost.de/#preis">
+            <i class="fas fa-euro-sign"></i>
+            Preise
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ballettstudio Ost Frankfurt. Alle Rechte vorbehalten. | Folge deiner Leidenschaft für den Tanz!</p>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer für Animationen
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+        }
+      });
+    }, observerOptions);
+
+    // Beobachte alle Blog-Karten
+    document.addEventListener('DOMContentLoaded', function() {
+      const blogCards = document.querySelectorAll('.blog-card');
+      blogCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        observer.observe(card);
+      });
+    });
+  </script>
 </body>
 </html>
-
