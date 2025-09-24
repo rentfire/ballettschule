@@ -447,7 +447,7 @@
     .footer-links {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 0px;
     }
 
     .footer-links a {
@@ -662,6 +662,10 @@
 </div>
 <br><br>
 <div style="text-align: left; column-count: 1; padding: 0 30px; line-height: 1.8;">
+
+
+
+
 <div class="anfahrt-text">
   <p>Unser Ballettstudio Ost findest du im Frankfurter Osten, direkt am Osthafenplatz, in der Hanauer Landstraße 138 im Innenhof. <br>Mit den öffentlichen Verkehrsmitteln bist du ruckzuck bei uns:</p>
 <br>
@@ -673,9 +677,78 @@
   </ul>
 
   <p>Wir freuen uns auf deinen Besuch!</p>
+</div><br><br>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.6627660188283!2d8.710856076704257!3d50.11131887152945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0fedae7ed375%3A0xb2d79e105704851c!2sBallettstudio%20Ost%2C%20Ballettschule%20Frankfurt!5e0!3m2!1sde!2suk!4v1756295476358!5m2!1sde!2suk" 
+                    style="width:100%; height:350px; border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+	</div>
+    </div>
+  </section>
+
+
+  <!-- Kontakt & Bewertungen Section -->
+  <section id="contact" style="padding:80px 20px; background:#fff;">
+    <div class="container" style="max-width:1200px; margin:0 auto; text-align:center;">
+      <div class="section-header">
+        <h2>Kontaktiere uns</h2>
+        <p>Du hast Fragen zu unseren Kursen oder möchtest eine kostenlose Probestunde vereinbaren? Wir freuen uns auf deine Nachricht!</p>
+      </div>
+
+      <div style="margin:30px 0;">
+        <a href="mailto:info@ballettstudio-ost.de" class="cta-button">✉️ E-Mail schreiben</a>
+        <a href="https://www.ballettstudio-ost.de/#contact" class="cta-light">Kontaktformular</a>
+      </div>
+
+<div style="margin-top:60px; display:flex; justify-content:center;">
+  <div style="background:white; 
+              padding:30px 40px; 
+              border-radius:20px; 
+              box-shadow:0 10px 25px rgba(0,0,0,0.1); 
+              max-width:600px; 
+              text-align:center;">
+              
+    <!-- Nur dieser Bereich orange -->
+    <h3 style="font-size:2rem; margin-bottom:15px; 
+               background: linear-gradient(135deg, #E3702D 0%, #ff6b6b 100%);
+               color:white;
+               display:inline-block;
+               padding:10px 20px;
+               border-radius:15px;">
+      ⭐⭐⭐⭐⭐ <br>82 Google 5-Sterne-Bewertungen
+    </h3>
+
+    <p style="font-size:1.2rem; line-height:1.6; margin-bottom:20px;">
+      Über 80 zufriedene Tänzerinnen, Tänzer und Eltern haben uns mit Bestnote bewertet.<br>
+      Danke für euer Vertrauen!
+    </p>
+
+    <a href="https://www.google.com/maps/place/Ballettstudio+Ost/@50.110924,8.682127" 
+       target="_blank" rel="noopener" 
+       style="display:inline-block; 
+              background:#E3702D; 
+              color:white; 
+              font-weight:600; 
+              padding:12px 25px; 
+              border-radius:30px; 
+              text-decoration:none; 
+              transition:all 0.3s ease;">
+      👉 Bewertungen ansehen
+    </a>
+  </div>
 </div>
 
+
+    </div>
   </section>
+
+
+
 
   <!-- Blog Section -->
   <section id="blog" class="blog-section">
@@ -754,15 +827,10 @@
       <div class="footer-section">
         <h3>🔗 Zusätzliche Ressourcen</h3>
         <div class="footer-links">
-          <a href="https://ballettstost.web.app/" target="_blank" rel="noopener">
-             Ballettstudio Ost Web App
-          </a>
-          <a href="https://kinderballett-frankfurt.tiiny.site/" target="_blank" rel="noopener">
-             Kinderballett Frankfurt
-          </a><br>
-          <a href="https://nav.zimmer-rohde.com/Cronus/WebClient/1.html" target="_blank" rel="noopener">
-             Ballett bei ZR
-          </a>
+          <a href="https://ballettstost.web.app/" target="_blank" rel="noopener">Ballettstudio Ost Web App</a>
+          <a href="https://kinderballett-frankfurt.tiiny.site/" target="_blank" rel="noopener">Kinderballett Frankfurt</a>
+	  <a href="https://ballettstost.codeberg.page/ballettschule-frankfurt/" target="_blank" rel="noopener">codeberg.page</a>
+          <a href="https://ballett-frankfurt.statichost.eu/" target="_blank" rel="noopener">statichost.eu</a>
         </div>
       </div>
 
@@ -805,7 +873,7 @@
 </a></p>
         </div>
       </div>
-
+</footer>
 <script>
   function toggleMenu() {
     const mobileNav = document.getElementById('mobileNav');
