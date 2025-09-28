@@ -246,6 +246,9 @@
     .hero-text {
       flex: 1;
       animation: slideInLeft 1s ease-out;
+      /* KORREKTUR: Z-Index hinzugefügt, um CTA-Buttons auf Desktop klickbar zu machen */
+      position: relative; 
+      z-index: 10;
     }
 
     @keyframes slideInLeft {
@@ -1575,7 +1578,7 @@
 
       <div class="map-container fade-in-up">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.106567223696!2d8.711802976722247!3d50.11599817151557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0b2df27f03d5%3A0x6b7729e160538f71!2sHanauer%20Landstra%C3%9Fe%20138%2C%2060314%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1700684078440!5m2!1sde!2sde" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.121404118924!2d8.711847675971485!3d50.11765870233633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0b55225c57b5%3A0xc3910c2262294f99!2sBallettstudio%20Ost!5e0!3m2!1sde!2sde!4v1727506927377!5m2!1sde!2sde"
             style="width:100%; height:350px; border:0;" 
             allowfullscreen="" 
             loading="lazy" 
@@ -1593,7 +1596,7 @@
       </div>
 
       <div style="margin:30px 0;" class="fade-in-up">
-        <a href="mailto:info@ballettstudio-ost.de" class="cta-button">✉️ E-Mail schreiben</a>
+        <a href="mailto:info@ballettstudio-ost.de" class="cta-button">✉️ E-Mail schreiben</a><br>
         <a href="https://www.ballettstudio-ost.de/#contact" class="cta-light">Kontaktformular</a>
       </div>
 
