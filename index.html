@@ -784,7 +784,6 @@
       background: radial-gradient(circle, rgba(227, 112, 45, 0.05) 0%, transparent 70%);
       transform: scale(0);
       transition: transform 0.5s ease;
-      pointer-events: none;
     }
 
     .about-card:hover::before {
@@ -1420,7 +1419,6 @@
 </head>
 
 <body>
-  <!-- Reduced Background Particles for better performance -->
   <div class="bg-particles">
     <div class="particle" style="left: 20%; width: 4px; height: 4px; animation-delay: 0s;"></div>
     <div class="particle" style="left: 40%; width: 5px; height: 5px; animation-delay: 8s;"></div>
@@ -1428,7 +1426,6 @@
     <div class="particle" style="left: 80%; width: 4px; height: 4px; animation-delay: 24s;"></div>
   </div>
 
-  <!-- Floating Elements -->
   <div class="floating-element floating-1">
     <div style="width: 60px; height: 60px; background: linear-gradient(135deg, rgba(227, 112, 45, 0.1), rgba(52, 152, 219, 0.1)); border-radius: 50%; backdrop-filter: blur(10px);"></div>
   </div>
@@ -1439,7 +1436,6 @@
     <div style="width: 50px; height: 50px; background: linear-gradient(135deg, rgba(227, 112, 45, 0.1), rgba(52, 152, 219, 0.1)); border-radius: 0 50% 50% 50%; backdrop-filter: blur(10px);"></div>
   </div>
 
-  <!-- Header -->
   <header>
     <div class="menu">
       <a href="#" class="logo">
@@ -1470,10 +1466,8 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero">
     <div class="hero-section">
-      <!-- Mobile Decorative Elements -->
       <div class="mobile-decorative"></div>
       <div class="mobile-decorative"></div>
 
@@ -1482,8 +1476,9 @@
         <h2>Entdecke die Welt des klassischen Balletts</h2>
         <p>Ob Anfänger oder Fortgeschrittene – bei uns findest du deinen Platz. Erfahrene Profis leiten dich mit viel Freude am Tanz und individueller Betreuung an dein persönliches Ziel. Starte deine Reise mit einer Probestunde, die für Kinder bis 14 Jahre kostenlos ist. Wir freuen uns auf dich!</p>
         
-        <!-- CTA Container inside hero-text for desktop -->
         <div class="cta-container">
+            <a href="mailto:info@ballettstudio-ost.de?subject=Kostenlose%20Probestunde%20beim%20Ballettstudio%20Ost&body=" class="cta-light">Kostenlose Probestunde</a>
+            <a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php" class="cta-button">Infos zu unseren Kursen</a>
          </div>
       </div>
       
@@ -1501,7 +1496,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container">
       <div class="section-header fade-in-up">
@@ -1581,7 +1575,7 @@
 
       <div class="map-container fade-in-up">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.6627660188283!2d8.710856076704257!3d50.11131887152945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0fedae7ed375%3A0xb2d79e105704851c!2sBallettstudio%20Ost%2C%20Ballettschule%20Frankfurt!5e0!3m2!1sde!2suk!4v1756295476358!5m2!1sde!2suk" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.106567223696!2d8.711802976722247!3d50.11599817151557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0b2df27f03d5%3A0x6b7729e160538f71!2sHanauer%20Landstra%C3%9Fe%20138%2C%2060314%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1700684078440!5m2!1sde!2sde" 
             style="width:100%; height:350px; border:0;" 
             allowfullscreen="" 
             loading="lazy" 
@@ -1591,7 +1585,6 @@
     </div>
   </section>
 
-  <!-- Kontakt & Bewertungen Section -->
   <section id="contact" class="contact-section" style="padding:80px 40px; position: relative; z-index: 1;">
     <div class="container" style="max-width:1200px; margin:0 auto; text-align:center; position: relative; z-index: 2;">
       <div class="section-header fade-in-up">
@@ -1600,7 +1593,7 @@
       </div>
 
       <div style="margin:30px 0;" class="fade-in-up">
-        <a href="mailto:info@ballettstudio-ost.de" class="cta-button">✉️ E-Mail schreiben</a><br>
+        <a href="mailto:info@ballettstudio-ost.de" class="cta-button">✉️ E-Mail schreiben</a>
         <a href="https://www.ballettstudio-ost.de/#contact" class="cta-light">Kontaktformular</a>
       </div>
 
@@ -1620,16 +1613,24 @@
             Danke für euer Vertrauen!
           </p>
 
-<a href="https://maps.google.com/?q=Ballettstudio+Ost+Frankfurt" target="_blank" rel="noopener noreferrer">
-  👉 Bewertungen ansehen
-</a>
-
+          <a href="https://www.google.com/maps/place/Ballettstudio+Ost,+Ballettschule+Frankfurt/@50.1113189,8.7108561,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0fedae7ed375:0xb2d79e105704851c!8m2!3d50.1113189!4d8.713431!16s%2Fg%2F11fnx7hllz?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D" 
+             target="_blank" rel="noopener" 
+             style="display:inline-block; 
+                    background:linear-gradient(135deg, #E3702D, #ff6b6b); 
+                    color:white; 
+                    font-weight:600; 
+                    padding:12px 25px; 
+                    border-radius:30px; 
+                    text-decoration:none; 
+                    transition:all 0.3s ease;
+                    box-shadow: 0 5px 15px rgba(227, 112, 45, 0.3);">
+            👉 Bewertungen ansehen
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Blog Section -->
   <section id="blog" class="blog-section fade-in-up">
     <div class="section-header">
       <h2>Unser Ballett-Blog</h2>
@@ -1694,7 +1695,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-section fade-in-up">
@@ -1755,7 +1755,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2024 Ballettstudio Ost. Alle Rechte vorbehalten.</p>
+      <p>© 2024 Ballettstudio Ost. Alle Rechte vorbehalten.</p>
     </div>
   </footer>
 
@@ -1837,5 +1837,3 @@
   </script>
 </body>
 </html>
-
-    
