@@ -9,6 +9,8 @@
   <link rel="icon" href="https://www.ballettstudio-ost.de/icons/safari-pinned-tab.svg">
   <link rel="mask-icon" href="https://www.ballettstudio-ost.de/icons/safari-pinned-tab.svg" color="#000000">
   <link rel="apple-touch-icon" href="https://www.ballettstudio-ost.de/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
 
   <style>
 * {
@@ -132,6 +134,8 @@ nav ul li a:hover {
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 .hero-text h2 {
@@ -143,6 +147,8 @@ nav ul li a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
 .hero-text p {
@@ -150,6 +156,25 @@ nav ul li a:hover {
   color: #555;
   margin-bottom: 40px;
   line-height: 1.8;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+}
+
+.cta-container {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.6s forwards;
+}
+
+/* Hero Text Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-image {
@@ -163,6 +188,19 @@ nav ul li a:hover {
   height: auto;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInScale 1s ease 0.8s forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* CTA Buttons */
@@ -185,7 +223,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
   box-shadow: 0 15px 35px rgba(227, 112, 45, 0.4);
 }
 
@@ -198,7 +236,7 @@ nav ul li a:hover {
 .cta-light:hover {
   background: #E3702D;
   color: white;
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
 }
 
 /* About Section */
@@ -227,17 +265,30 @@ nav ul li a:hover {
   gap: 25px;
 }
 
+/* Scroll Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .about-card {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 25px;
   border-radius: 15px;
   border-left: 4px solid #E3702D;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
 }
 
 .about-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateX(10px) rotateY(5deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .about-card h3 {
@@ -268,11 +319,11 @@ nav ul li a:hover {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .image-container:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(2deg);
 }
 
 .image-overlay {
@@ -317,6 +368,12 @@ nav ul li a:hover {
   max-width: 800px;
   margin: 0 auto;
   box-shadow: 0 15px 35px rgba(227, 112, 45, 0.3);
+  transition: all 0.4s ease;
+}
+
+.testimonial-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 45px rgba(227, 112, 45, 0.4);
 }
 
 .quote-icon {
@@ -384,13 +441,14 @@ nav ul li a:hover {
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   border-top: 4px solid #E3702D;
+  transform-style: preserve-3d;
 }
 
 .blog-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
 .blog-card h3 {
@@ -398,6 +456,11 @@ nav ul li a:hover {
   color: #2c3e50;
   margin-bottom: 15px;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.blog-card:hover h3 {
+  color: #E3702D;
 }
 
 .blog-card p {
@@ -411,7 +474,23 @@ nav ul li a:hover {
   color: #E3702D;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.blog-card a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #E3702D;
+  transition: width 0.3s ease;
+}
+
+.blog-card a:hover::after {
+  width: 100%;
 }
 
 .blog-card a:hover {
@@ -455,12 +534,13 @@ footer {
 .footer-links a {
   color: #bdc3c7;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   padding: 8px 0;
 }
 
 .footer-links a:hover {
   color: #3498db;
+  transform: translateX(5px);
 }
 
 .footer-bottom {
@@ -624,15 +704,15 @@ footer {
       </nav>
     </div>
 
-	  <div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="#about">Über uns</a></li>
-    <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php">Kurse</a></li>
-    <li><a href="https://www.ballettstudio-ost.de/#stundenplan">Stundenplan</a></li>
-    <li><a href="https://www.ballettstudio-ost.de/#preis">Preise</a></li>
-    <li><a href="#contact">Kontakt</a></li>
-  </ul>
-</div>
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="https://www.ballettstudio-ost.de/ballettkurse-frankfurt.php">Kurse</a></li>
+        <li><a href="https://www.ballettstudio-ost.de/#stundenplan">Stundenplan</a></li>
+        <li><a href="https://www.ballettstudio-ost.de/#preis">Preise</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
   </header>
 	
   <!-- Desktop Hero Section (Original) -->
@@ -655,7 +735,7 @@ footer {
   </section>
 
 
-  <!-- About Section -->
+ <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container">
       <div class="section-header">
@@ -666,17 +746,17 @@ footer {
       <div class="about-content">
         <div class="about-text">
           <div class="about-card">
-            <h3>🌟 Unsere Mission</h3>
+            <h3><i class="bi bi-stars"></i> Unsere Mission</h3>
             <p>Im Ballettstudio Ost schaffen wir mehr als nur Ballettunterricht – wir erschaffen einen Raum, in dem Träume Flügel bekommen. Unter der liebevollen und professionellen Leitung unseres erfahrenen Teams entdecken Kinder, Jugendliche und Erwachsene die zeitlose Schönheit des klassischen Balletts.</p>
           </div>
           
           <div class="about-card">
-            <h3>🎭 Professionelle Betreuung</h3>
+            <h3><i class="bi bi-mask"></i> Professionelle Betreuung</h3>
             <p>Jeder Schritt wird von qualifizierten Ballettlehrern begleitet, die nicht nur exzellente Technik vermitteln, sondern auch die Freude am Tanz entfachen. Wir glauben daran, dass jeder Mensch seinen eigenen Rhythmus hat und unterstützen jeden individuell auf seinem Weg.</p>
           </div>
           
           <div class="about-card">
-            <h3>🏛️ Moderne Ausstattung</h3>
+            <h3><i class="bi bi-bank"></i> Moderne Ausstattung</h3>
             <p>Unser Studio bietet die ideale Atmosphäre zum Lernen und Wachsen. Mit professionellen Spiegeln, optimaler Raumaufteilung und einer warmen, einladenden Umgebung schaffen wir die besten Bedingungen für deine tänzerische Entwicklung.</p>
           </div>
         </div>
@@ -774,7 +854,7 @@ footer {
                display:inline-block;
                padding:8px 16px;  
                border-radius:14px;">
-      ⭐⭐⭐⭐⭐ <br>82 Google <br>5-Sterne-Bewertungen
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <br>82 Google <br>5-Sterne-Bewertungen
     </h3>
 
     <p style="font-size:1rem; line-height:1.4; margin-bottom:16px;"> 
@@ -792,7 +872,7 @@ footer {
               border-radius:28px; 
               text-decoration:none; 
               transition:all 0.3s ease;">
-      👉 Bewertungen ansehen
+      <i class="bi bi-hand-index-thumb-fill"></i> Bewertungen ansehen
     </a>
   </div>
 </div>
@@ -814,55 +894,55 @@ footer {
 
     <div class="blog-grid">
       <div class="blog-card">
-        <h3>👗 Ballettbekleidung</h3>
+        <h3><i class="bi bi-bag-fill"></i> Ballettbekleidung</h3>
         <p>Alles über die richtige Auswahl von Balletttrikots, Schuhen und Accessoires für optimalen Komfort und Performance.</p>
         <a href="https://www.ballettstudio-ost.de/auswahl-balletttrikot-ballettschuhe.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🏫 Ballettschule wählen</h3>
+        <h3><i class="bi bi-building"></i> Ballettschule wählen</h3>
         <p>Wichtige Kriterien für die Auswahl der passenden Ballettschule und worauf Eltern achten sollten.</p>
         <a href="https://www.ballettstudio-ost.de/auswahlkriterien-passende-ballettschule.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>❤️ Gesundheit & Vorteile</h3>
+        <h3><i class="bi bi-heart-fill"></i> Gesundheit & Vorteile</h3>
         <p>Entdecke die vielen gesundheitlichen und mentalen Vorteile des Balletttrainings für alle Altersgruppen.</p>
         <a href="https://www.ballettstudio-ost.de/11-argumente-mit-ballett-anzufangen.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🛡️ Verletzungsprävention</h3>
+        <h3><i class="bi bi-shield-fill-check"></i> Verletzungsprävention</h3>
         <p>Wichtige Tipps zur Vermeidung von Verletzungen beim Balletttraining und sichere Übungstechniken.</p>
         <a href="https://www.ballettstudio-ost.de/verletzungen-vermeiden-im-ballett.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🏠 Ballett zu Hause</h3>
+        <h3><i class="bi bi-house-fill"></i> Ballett zu Hause</h3>
         <p>Praktische Übungen und Tipps für das Training zu Hause, um deine Technik zu verbessern.</p>
         <a href="https://www.ballettstudio-ost.de/ballett-zuhause.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🔥 Fitness & Kalorien</h3>
+        <h3><i class="bi bi-fire"></i> Fitness & Kalorien</h3>
         <p>Erfahre mehr über den Kalorienverbrauch beim Ballett und wie es deine Fitness verbessert.</p>
         <a href="https://www.ballettstudio-ost.de/kalorien-verbrauch-ballett.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🩰 Ballettschuhe Geschichte</h3>
+        <h3><i class="bi bi-universal-access"></i> Ballettschuhe Geschichte</h3>
         <p>Die faszinierende Entwicklung des Ballettschuhs von den Anfängen bis heute.</p>
         <a href="https://www.ballettstudio-ost.de/geschichte-des-ballettschuhs.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🎭 Berühmte Ballettstücke</h3>
+        <h3><i class="bi bi-mask"></i> Berühmte Ballettstücke</h3>
         <p>Entdecke die Geschichten hinter den weltberühmten klassischen Balletten.</p>
         <a href="https://www.ballettstudio-ost.de/beruehmte-ballettstuecke.php">Mehr erfahren →</a>
       </div>
 
       <div class="blog-card">
-        <h3>🎵 Ballett & Musik</h3>
+        <h3><i class="bi bi-music-note-beamed"></i> Ballett & Musik</h3>
         <p>Die wundervolle Verbindung zwischen Musik und Tanz in der Ballettgeschichte.</p>
         <a href="https://www.ballettstudio-ost.de/ballett-musik.php">Mehr erfahren →</a>
       </div>
@@ -891,16 +971,16 @@ footer {
       </div>
 		
       <div class="footer-section">
-        <h3>📍 Kontakt</h3>
+        <h3><i class="bi bi-geo-alt-fill"></i> Kontakt</h3>
         <div class="footer-links">
           <a href="mailto:info@ballettstudio-ost.de">
-            ✉️ info@ballettstudio-ost.de
+            <i class="bi bi-envelope-fill"></i> info@ballettstudio-ost.de
           </a>
           <a href="https://www.ballettstudio-ost.de/#contact">
-            💬  Kontaktformular
+            <i class="bi bi-chat-dots-fill"></i>  Kontaktformular
           </a>
           <a href="https://www.ballettstudio-ost.de/">
-            🌍 Hauptwebsite besuchen
+            <i class="bi bi-globe"></i> Hauptwebsite besuchen
           </a>
         </div>
       </div>
@@ -924,7 +1004,7 @@ footer {
         <p>Ballettstudio Ost</p>
         <p>Hanauer Landstraße 138</p>
         <p>60314 Frankfurt</p> 
-<p>📞 <a href="tel:0496929721499" style="color:#bdc3c7; text-decoration:none;">
+<p><i class="bi bi-telephone-fill"></i> <a href="tel:0496929721499" style="color:#bdc3c7; text-decoration:none;">
    069-29721499
 </a></p>
         </div>
